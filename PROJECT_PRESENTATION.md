@@ -6,9 +6,10 @@
 npm install -D vitest
 npm install (for any other dependencies)
 ```
-Setup script in package.json "test": "vitest"
+Setup script in package.json {"test": "vitest"}
 
-```npm run test
+```js
+npm run test
 ```
 Write your function in main.js
 
