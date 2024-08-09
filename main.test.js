@@ -63,3 +63,24 @@ test("groupNumbers returns object with array values", () => {
         expect(Array.isArray(value)).toBe(true);
     });
 });
+
+//test the array for each key contains the correct numbers within the specified range of that group
+test("groupNumbers returns object with array values containing correct numbers", () => {
+    //iterate over each key in object
+    resultKeys.forEach(key => {
+        //split the key into an array of two strings, in this case split either side of hyphen
+        const range = key.split("-");
+        //convert the 2 strings to integers and set as min / max
+        const min = parseInt(range[0]);
+        const max = parseInt(range[1]);
+        //get thearray of values from result object
+        const values = result[key];
+        //iterate over each value in array
+        values.forEach(value => {
+            console.log('Value:', value);
+            console.log('Min:', min);
+            console.log('Max:', max);
+            expect(value >= min && value <= max).toBe(true);
+        });
+    });
+});
