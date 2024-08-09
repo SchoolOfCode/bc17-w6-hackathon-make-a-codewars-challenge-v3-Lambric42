@@ -30,3 +30,12 @@ test("groupNumbers returns object with only expected keys in any order", () => {
         expect(Object.keys(result)).toContain(key);
     });
 });
+
+//this is checking if any unexpected keys are in the result object
+test("groupNumbers does not return unexpected keys in result object", () => {  
+    console.log('Expected keys:', expectedKeys);
+    console.log('Result keys:', resultKeys);
+        Object.keys(result).forEach(key => {
+        expect(expectedKeys).toContain(key);
+    });
+});
