@@ -55,3 +55,11 @@ test("groupNumbers returns object with unique and correct keys", () => {
     console.log('Unique keys size:', uniqueKeys.size);
     expect(resultKeys.length).toBe(uniqueKeys.size);
 });
+
+// test the key value type is an array
+test("groupNumbers returns object with array values", () => {
+    Object.values(result).forEach(value => {
+        console.log('Value type:', Array.isArray(value));
+        expect(Array.isArray(value)).toBe(true);
+    });
+});
