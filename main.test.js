@@ -21,7 +21,7 @@ const expectedKeys = [
     "0-10",
 ]; // 1 out of order for PoC
 const resultKeys = Object.keys(result);
-
+const uniqueKeys = new Set(resultKeys);
 //this allows us to check if the result object contains all the expected keys in any order, unlike toEqual which would have to be in the same order
 test("groupNumbers returns object with only expected keys in any order", () => {
     console.log("Expected keys:", expectedKeys);
