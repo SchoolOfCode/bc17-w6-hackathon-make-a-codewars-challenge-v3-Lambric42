@@ -46,3 +46,12 @@ test("groupNumbers returns object with the same number of keys as expected keys"
     console.log('Result keys length:', resultKeys.length);
     expect(resultKeys.length).toBe(expectedKeys.length);
 });
+
+//check for duplicate keys
+test("groupNumbers returns object with unique and correct keys", () => {
+    console.log('Result keys:', resultKeys);
+    console.log('Unique keys:', Array.from(uniqueKeys));
+    console.log('Result keys length:', resultKeys.length);
+    console.log('Unique keys size:', uniqueKeys.size);
+    expect(resultKeys.length).toBe(uniqueKeys.size);
+});
