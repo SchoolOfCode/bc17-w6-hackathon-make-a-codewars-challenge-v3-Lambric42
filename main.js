@@ -1,3 +1,22 @@
+//Here we have a testArray which contains 250 values ranging between integers, decimal values, and other non-integers. 
+
+// Write a function called groupNumbers which takes in the testArray and separates out integer values into groups based on the following inclusive ranges;
+// "0-10" - Numbers between 0 and 10
+// "11-20" - Numbers between 11 and 20
+// "21-30" - Numbers between 21 and 30
+// etc ...
+// "91-100" - Numbers between 91 and 100
+
+// The function should return an object where each key is the group name (e.g. "0-10", "11-20") 
+//and the value of each object is an array containing only integers which fall into that range. Remember, the range of the array is inclusive.
+
+//here is an example of the expected output format:
+// {
+//     "0-10": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+//     "11-20": [11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
+//     "etc": ...
+// }
+
 export const testArray = [
     25, 9, 45, 10, -3, 11, 99, 55, 23, 100, 65, 32, 20, 
     77, 90, 44, 6, 21, 50, 38, 7, 15, -10, 0, 8, 1, 22, 
