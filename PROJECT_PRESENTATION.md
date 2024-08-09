@@ -2,14 +2,14 @@ Put your plan, story, and any supporting material here, you could use the help o
 
 Here we have a testArray which contains 250 values ranging between integers, decimal values, and other non-integers. 
 
-Write a function which takes in the testArray and separates out integer values into groups based on the following inclusive ranges;
+Write a function called groupNumbers which takes in the testArray and separates out integer values into groups based on the following inclusive ranges;
 "0-10" - Numbers between 0 and 10
 "11-20" - Numbers between 11 and 20
 "21-30" - Numbers between 21 and 30
 etc ...
 "91-100" - Numbers between 91 and 100
 
-The function should return an object where each key is the group name (e.g. "0-10", "11-20") and the value of each object is an array containing all integers which fall into that range. Remember, the range of the array is inclusive.
+The function should return an object where each key is the group name (e.g. "0-10", "11-20") and the value of each object is an array containing only integers which fall into that range. Remember, the range of the array is inclusive.
 
 
 

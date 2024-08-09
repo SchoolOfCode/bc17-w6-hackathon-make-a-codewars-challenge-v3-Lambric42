@@ -19,9 +19,48 @@ export const testArray = [
     [], -1, -10, -20, -30, -5, true, false
   ];
   
-  //write code to check each test passes
-export function groupNumbers () {
-  //write code to pass 2nd test of correct object with expected keys
-
-    return { "0-10": [1, 10, 7, 4], "11-20": [14, 20], "21-30": [], "31-40": [], "41-50": [], "51-60": [], "61-70": [], "71-80": [], "81-90": [], "91-100": [] };
+  //write a function that correctly groups numbers into the expected ranges using the testArray above as input
+export function groupNumbers (testArray) {
+  const groups = {
+    "0-10": [],
+    "11-20": [],
+    "21-30": [],
+    "31-40": [],
+    "41-50": [],
+    "51-60": [],
+    "61-70": [],
+    "71-80": [],
+    "81-90": [],
+    "91-100": []
   };
+
+  // Loop through the array to group integers into their respective ranges
+  testArray.forEach(item => {
+    if (typeof item === 'number' && Number.isInteger(item)) {
+      if (item >= 0 && item <= 10) {
+        groups["0-10"].push(item);
+      } else if (item >= 11 && item <= 20) {
+        groups["11-20"].push(item);
+      } else if (item >= 21 && item <= 30) {
+        groups["21-30"].push(item);
+      } else if (item >= 31 && item <= 40) {
+        groups["31-40"].push(item);
+      } else if (item >= 41 && item <= 50) {
+        groups["41-50"].push(item);
+      } else if (item >= 51 && item <= 60) {
+        groups["51-60"].push(item);
+      } else if (item >= 61 && item <= 70) {
+        groups["61-70"].push(item);
+      } else if (item >= 71 && item <= 80) {
+        groups["71-80"].push(item);
+      } else if (item >= 81 && item <= 90) {
+        groups["81-90"].push(item);
+      } else if (item >= 91 && item <= 100) {
+        groups["91-100"].push(item);
+      }
+    }
+  });
+
+  return groups;
+}
+console.log(groupNumbers(testArray));
