@@ -29,3 +29,7 @@ duplicates? check if any value occurs multiple times, could i add it to a regex 
 
 maybe skip random as jhard to test. specify array input, cover edge cases, negatives, decimals/floating point, letters, other characters ~@}{} 
 . could try putting the array in reverse order.
+
+Laid out some basic tests. e.g. is it an object. So i just returned an object
+
+when doing the check for correct number of keys of returned object being equal to length of array of expected keys, i realised it wouldn't work for correct duplicate keys. so i had to learn about sets as a way to store unique values. i also realised that yo ucan't have an object with duplicate keys, it takes the last key and value and ignores the first instance of that key even if different value, so unique test isn't super relevant.
