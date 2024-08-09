@@ -39,3 +39,10 @@ test("groupNumbers does not return unexpected keys in result object", () => {
         expect(expectedKeys).toContain(key);
     });
 });
+
+//this is checking if the result object has the same number of keys as the expected keys
+test("groupNumbers returns object with the same number of keys as expected keys", () => {
+    console.log('Expected keys length:', expectedKeys.length);
+    console.log('Result keys length:', resultKeys.length);
+    expect(resultKeys.length).toBe(expectedKeys.length);
+});
