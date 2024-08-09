@@ -84,3 +84,17 @@ test("groupNumbers returns object with array values containing correct numbers",
         });
     });
 });
+
+// test array for each key contains only integers, no decimal numbers, strings, booleans, objects, arrays, null, undefined, NaN
+test("groupNumbers returns object with array values containing only integers", () => {
+    //iterate over each key in object
+    resultKeys.forEach(key => {
+        //get the array of values from result object
+        const values = result[key];
+        //iterate over each value in array
+        values.forEach(value => {
+            console.log('Value:', value);
+            expect(Number.isInteger(value)).toBe(true);
+        });
+    });
+});
